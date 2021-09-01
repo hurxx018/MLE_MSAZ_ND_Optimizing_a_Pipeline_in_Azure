@@ -75,7 +75,7 @@ def main():
     run.log("accuracy", np.float(accuracy))
 
     os.makedirs(os.path.join(".", "outputs"), exist_ok=True)
-    with open(os.path.join(".", "outputs", f"model_{args.C}_{args.max_iter}.joblib"), "wb") as f:
+    with open(os.path.join(".", "outputs", f"model_{args.C:.4f}_{args.max_iter:d}.joblib"), "wb") as f:
         joblib.dump(model, f)
 
 if __name__ == '__main__':
